@@ -1,6 +1,5 @@
 from fastapi import FastAPI
-#from app.routes.list import router as list_router
-from app.routes.tuples import router as tuples_router
+from app.routes.sets import router as sets_router
 
 app = FastAPI()
 
@@ -8,5 +7,5 @@ app = FastAPI()
 async def health_check():
     return {"status": "ok"}
 
-#app.include_router(list_router)
-app.include_router(tuples_router)
+# app.include_router(list_router)
+app.include_router(sets_router)
